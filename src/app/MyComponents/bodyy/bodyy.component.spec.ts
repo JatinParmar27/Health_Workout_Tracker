@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 import { BodyyComponent } from './bodyy.component';
 
 describe('BodyyComponent', () => {
@@ -8,7 +9,14 @@ describe('BodyyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BodyyComponent]
+      imports: [BodyyComponent],
+      // declarations: [BodyyComponent]
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {snapsot: {paramMap: {get : () => 'test-value'}}}
+        }
+      ]
     })
     .compileComponents();
 

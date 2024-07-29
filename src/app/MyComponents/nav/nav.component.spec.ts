@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 import { NavComponent } from './nav.component';
 
 describe('NavComponent', () => {
@@ -8,7 +9,14 @@ describe('NavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavComponent]
+      imports: [NavComponent],
+      // declarations: [NavComponent]
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {snapsot: {paramMap: {get : () => 'test-value'}}}
+        }
+      ]
     })
     .compileComponents();
 
