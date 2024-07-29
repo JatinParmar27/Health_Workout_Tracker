@@ -1,40 +1,16 @@
-<div class="bgImg">
-  <div class="box h-full w-full grid place-content-center">
-    <form class=" formBox w-96 sm:w-96 p-10">
-        <p class="text-3xl font-semibold text-white text-center mb-8">Add Workout</p>
-      <div class="mb-5">
-        <label
-          for="name"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >User Name*</label
-        >
-        <input
-          type="text"
-          id="email"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          placeholder=""
-          required
-        />
+<div class="container">
+  <div class="flex flex-col-reverse md:flex-row justify-evenly items-center text-center h-[100vh] w-[100vw]">
+    <div class="col-6 md:w-1/2 h-1/2 flex md:items-start px-5 md:p-0 items-center md:justify-center flex-col md:ps-14">
+      <p class="md:text-6xl font-bold text-start text-4xl">Track Your Health</p>
+      <p class="md:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, commodi?</p>
+      <div class="buttons flex flex-col w-full md:flex-row">
+        <a class="py-2 bg-blue-600 hover:bg-blue-700 me-3 px-6 mt-3 rounded text-white font-semibold" routerLink="/add-workout">Add Workout</a>
+        <button class="py-2 bg-blue-600 hover:bg-blue-700 me-3 px-6 mt-3 rounded text-white font-semibold" routerLink="/report">Report</button>
+        <button class="py-2 bg-blue-600 hover:bg-blue-700 me-3 px-6 mt-3 rounded text-white font-semibold" routerLink="/progress">Progress Chart</button>
       </div>
-      <div class="mb-5">
-        <label
-          for="workoutType"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >Your password</label
-        >
-        <input
-          type="password"
-          id="password"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-          required
-        />
-      </div>
-      <button
-        type="submit"
-        class="text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center"
-      >
-        Submit
-      </button>
-    </form>
+    </div>
+    <div class="col-6 w-1/2 items-center flex justify-center">
+      <img src="assets/workout.svg" class="w-full">
+    </div>
   </div>
 </div>
