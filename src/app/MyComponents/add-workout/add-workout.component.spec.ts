@@ -8,10 +8,17 @@ describe('AddWorkoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AddWorkoutComponent]
+      imports: [AddWorkoutComponent],
+      declarations: [AddWorkoutComponent],
     })
     .compileComponents();
 
+    fixture = TestBed.createComponent(AddWorkoutComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(AddWorkoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

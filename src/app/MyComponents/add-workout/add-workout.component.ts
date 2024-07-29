@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import swal from 'sweetalert';
 
 class Workout {
   constructor(
@@ -27,9 +28,12 @@ class User {
 })
 export class AddWorkoutComponent {
   workoutForm: FormGroup;
-  userId: number = 1; // Replace with logic to get a unique user ID
+  userId: number; // Replace with logic to get a unique user ID
 
   constructor(private fb: FormBuilder) {
+
+    this.userId = Number(localStorage.getItem('lastUserId')) || 1;
+
     this.workoutForm = this.fb.group({
       name: ['', Validators.required],
       workoutType: ['', Validators.required],
@@ -51,28 +55,23 @@ export class AddWorkoutComponent {
         user.workouts.push(workoutData);
       } else {
         user = new User(
-          this.userId++,
+          this.userId,
           this.workoutForm.value.name,
           [workoutData]
         );
         userData.push(user);
+
+        localStorage.setItem('lastUserId', (this.userId + 1).toString());
+        this.userId++;
       }
 
       localStorage.setItem('userData', JSON.stringify(userData));
       
       console.log('Workout saved:', userData);
+      swal("Workout Added", "", "success");
 
-      // Call functions to update table and chart if needed
-      this.updateTable();
-      this.updateChart();
     }
   }
 
-  updateTable(): void {
-    // Implement table update logic here
-  }
 
-  updateChart(): void {
-    // Implement chart update logic here
-  }
 }
