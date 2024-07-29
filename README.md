@@ -2,19 +2,47 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.
 
-## Development server
+##Description
+This project is an Angular application that includes features for managing user workouts. It provides functionality to add, view, and filter workouts, with features such as pagination and search. Also the bonus one the Graphical representation of workout done by the users.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prerequisites
+* Node.js and npm (Node Package Manager) installed.
+* Angular CLI installed globally (npm install -g @angular/cli).
 
-## Build
+## Installation
+* clone the repo
+```
+git clone https://github.com/your-repo/project-name.git
+cd project-name
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Install Dependencies
+```
+npm install
+```
 
-## Running unit tests
+* Start the dev server
+```
+ng serve --open
+```
+
+# Running Unit Test
+
+## With Code Coverage
+
+* Run the test with code coverage
+```
+ng test --code-coverage
+```
+
+* View the code coverage report
+  ```
+  open coverage/index.html
+  ```
+
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
