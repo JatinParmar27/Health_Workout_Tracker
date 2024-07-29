@@ -1,5 +1,10 @@
 # HealthWorkout
 
+Hosted App URL : 
+```
+https://health-workout-tracker.vercel.app/home
+```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.
 
 ##Description
